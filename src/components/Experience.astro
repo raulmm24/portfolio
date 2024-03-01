@@ -1,27 +1,26 @@
 ---
-import ExperienceItem from "./ExperienceItem.astro"
+import ExperienceItem from "./ExperienceItem.astro";
 
 const EXPERIENCIE = [
     {
-        date: 'Actualmente...',
-        title: 'Estudiando FP de desarrollo de aplicaciones web - Cidead',
-        description: 'Aprendiendo multiples lenguajes como HTML, CSS, JavaScript, etc.',
-        link: '#',
+       date: "Actualmente... - Cidead",
+       title: "Estudiando FP de Desarrollo de Aplicaciones Web.",
+       description:"Actualmente estudiando dicho Fp el cual estoy aprendiendo diversos lenguajes como HTML, CSS, SQL, JavaScript entre otros.",
     },
     {
-        date: 'Abril-Junio 2023',
-        title: 'Estudie un curso de Iniciación a la programación - EOI',
-        description: 'Estudie diversos lenguajes como HTML, CSS, JavaScript y React, para culminar nuestro aprendizaje realizamos un proyecto con la API de Marvel.',
-        link: '#',
+        date:"Abril-Junio 2023",
+        title:"Estudie un curso de Iniciación a la Programación Web",
+        description:"En dicho curso nos enseñador HTML, CSS, JavaScript y React, para finalizar el curso tuvimos que realizar una aplicación web con React con la API de Marvel.",
     },
 ]
 ---
-<ol class="relative border-s border-gray-200 ml-3"> 
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
     {
-        EXPERIENCIE.map(experiencie => (
-            <li class="mb-10 ms-4">
-                <ExperienceItem { ...experiencie} /> 
-            </li>
-        ))
-    },
+        EXPERIENCIE.map (experiencie => ( 
+        <li class="mb-10 ms-4">
+        <ExperienceItem {...experiencie} />
+        </li>    
+            )) 
+    }                 
+   
 </ol>
