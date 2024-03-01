@@ -1,7 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import Badge from '../components/Badge.astro';
+import SocialPill from '../components/SocialPill.astro';
+import LinkedInIcon from '../components/icons/LinkedIn.astro';
+import GitHubIcon from '../components/icons/GitHub.astro'
+import MailIcon from '../components/icons/Mail.astro';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -20,7 +23,20 @@ import Badge from '../components/Badge.astro';
 				<span>Sin experiencia. </span><span class="text-yellow-200/90">Estudiante de desarrollo de aplicaciones web. </span>
 				<span class="text-red-200/90"> De Barcelona, España.</span>
 			</h2>
-		<ul></ul>
+		<nav class="flex gap-x-4 mt-8">
+			<SocialPill href="https://linkedin.com/in/raúl-martínez-automoción/">
+				<LinkedInIcon class="w-6 h-6" />
+				LinkedIn
+			</SocialPill>
+			<SocialPill href="https://github.com/raulmm24">
+				<GitHubIcon class="w-6 h-6" />
+				GitHub
+			</SocialPill>
+			<SocialPill href="https://github.com/raulmm24">
+				<MailIcon class="w-6 h-6" />
+				raulmartinezmartinez24@gmail.com
+			</SocialPill>
+		</nav>
 		</section>		
 	</main>
 </Layout>
