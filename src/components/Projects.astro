@@ -1,12 +1,42 @@
 ---
+import Html5 from './icons/Html5';
+const TAGS = {
+    HTML5: {
+        name:'html5',
+        class:'bg-black text-white',
+        icon: Html5,
+           
+    },
+    TAILWIND: {
+        name:'Tailwind CSS',
+        class:'bg-white text-[#73bcf6]',
+        icon: () => (
+            <svg
+                viewBox="0 0 256 154"
+                width="256"
+                height="154"
+                xmlns="http://www.w3.org/2000/svg" 
+                preserveAspectRatio="xMidYMid">
+            <defs>
+                <linearGradient x1="-2.778%" y1="32%" x2="100%" y2="67.556%" id="gradient">
+                <stop stop-color="#2298BD" offset="0%"></stop>
+                <stop stop-color="#0ED7B5" offset="100%"></stop>
+                </linearGradient></defs>
+            <path
+                d="M128 0C93.867 0 72.533 17.067 64 51.2 76.8 34.133 91.733 27.733 108.8 32c9.737 2.434 16.697 9.499 24.401 17.318C145.751 62.057 160.275 76.8 192 76.8c34.133 0 55.467-17.067 64-51.2-12.8 17.067-27.733 23.467-44.8 19.2-9.737-2.434-16.697-9.499-24.401-17.318C174.249 14.743 159.725 0 128 0ZM64 76.8C29.867 76.8 8.533 93.867 0 128c12.8-17.067 27.733-23.467 44.8-19.2 9.737 2.434 16.697 9.499 24.401 17.318C81.751 138.857 96.275 153.6 128 153.6c34.133 0 55.467-17.067 64-51.2-12.8 17.067-27.733 23.467-44.8 19.2-9.737-2.434-16.697-9.499-24.401-17.318C110.249 91.543 95.725 76.8 64 76.8Z"
+                fill="url(#gradient)"></path></svg>
+
+        ),
+    },
+}
 const PROJECTS = [
     {
-        title:'Porfolio tatudev - Mi primera aplicación web con la que estoy aprendiendo',
+        title:'Porfolio tatudev - Mi primera aplicación web',
         description:'Este es mi primer proyecto en el cual estoy aprendido mucho',
         link:'#',
         github:'https://github.com/raulmm24/portfolio/blob/master/public/projects/webtatu.jpg',
         image:'../public/projects/webtatu.jpg',
-        tags: ['HTML5, Tailwind CSS, JavaScript, Astro'],
+        tags: [TAGS.HTML5, TAGS.TAILWIND, "JavaScript", "Astro"],
     }
 ]
 ---
@@ -14,14 +44,16 @@ const PROJECTS = [
 {
  PROJECTS.map(({image, title, description, tags }) => (
         <article>
-            <h3>{title}</h3>
-            <p>{description}</p>
+            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
             <ul>
                 {tags.map((tag) => (
                     <li>{tag}</li>
                 ))}
             </ul> 
-            <img src={image} alt={`captura de pantalla del proyecto ${image}`} />   
+            <img class="rounded shadow-2xl shadow-white/10" 
+            src={image} 
+            alt={`captura de pantalla del proyecto ${image}`} />   
         </article>
     ))
 }
