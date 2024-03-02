@@ -4,10 +4,12 @@ import Badge from '../components/Badge.astro';
 import SocialPill from '../components/SocialPill.astro';
 import Experience from '../components/Experience.astro';
 import SectionContainer from '../components/SectionContainer.astro';
+import Projects from '../components/Projects.astro';
 import LinkedInIcon from '../components/icons/LinkedIn.astro';
 import GitHubIcon from '../components/icons/GitHub.astro'
 import MailIcon from '../components/icons/Mail.astro';
 import BriefcaseIcon from '../components/icons/Briefcase.astro';
+import CodeIcon from '../components/icons/Code.astro'
 ---
 
 <Layout 
@@ -16,7 +18,7 @@ import BriefcaseIcon from '../components/icons/Briefcase.astro';
 	>
 	
 	<main class="px-4">
-		<SectionContainer  class="py-44 pb-24">
+		<SectionContainer  class="py-44 pb-32">
 			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
 				Hey, soy tatudev 
 				<a
@@ -47,13 +49,21 @@ import BriefcaseIcon from '../components/icons/Briefcase.astro';
 		</nav>
 		</SectionContainer>	
 
-		<SectionContainer id="experience">
-			<h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center">
+		<SectionContainer id="experiencia">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-2 items-center">
 				<BriefcaseIcon class="size-7" />
 				Experiencia Laboral
 			</h2>
 		<Experience />	
 		</SectionContainer>	
+
+		<SectionContainer id="experiencia">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-2 items-center">
+				<CodeIcon class="size-7" />
+				Proyectos
+			</h2>
+			<Projects />
+		</SectionContainer>
 	</main>
 </Layout>
 
