@@ -1,11 +1,14 @@
 ---
 import SocialPill from '../components/SocialPill.astro';
+import SectionContainer from './SectionContainer.astro';
+
 import LinkedInIcon from '../components/icons/LinkedIn.astro';
 import GitHubIcon from '../components/icons/GitHub.astro'
 import MailIcon from '../components/icons/Mail.astro';
 ---
 
-<nav class="flex gap-4 mt-8 flex-wrap">
+<SectionContainer  class="py-44 pb-32">
+<nav class="flex  mt-8 flex-wrap">
     <SocialPill href="https://linkedin.com/in/raúl-martínez-automoción/">
         <LinkedInIcon class="size-4 md:size-6" />
         LinkedIn
@@ -19,3 +22,4 @@ import MailIcon from '../components/icons/Mail.astro';
         raulmartinezmartinez24@gmail.com
     </SocialPill>
 </nav>
+</SectionContainer>
