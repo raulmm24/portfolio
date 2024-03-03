@@ -1,0 +1,21 @@
+---
+import SocialPill from '../components/SocialPill.astro';
+import LinkedInIcon from '../components/icons/LinkedIn.astro';
+import GitHubIcon from '../components/icons/GitHub.astro'
+import MailIcon from '../components/icons/Mail.astro';
+---
+
+<nav class="flex gap-4 mt-8 flex-wrap">
+    <SocialPill href="https://linkedin.com/in/raúl-martínez-automoción/">
+        <LinkedInIcon class="size-4 md:size-6" />
+        LinkedIn
+    </SocialPill>
+    <SocialPill href="https://github.com/raulmm24">
+        <GitHubIcon class="size-4 md:size-6" />
+        GitHub
+    </SocialPill>
+        <SocialPill href="mailto:raulmartinezmartinez24@gmail.com">
+        <MailIcon class="size-4 md:size-6" />
+        raulmartinezmartinez24@gmail.com
+    </SocialPill>
+</nav>
