@@ -1,10 +1,11 @@
 ---
-import TailwindCss from '../components/icons/TailwindCss.astro';
 import Html5 from '../components/icons/Html5.astro';
+import TailwindCss from '../components/icons/TailwindCss.astro';
+import Astro from '../components/icons/Astro.astro'
 
 const TAGS = {
     HTML5: {
-        name:'html',
+        name:'HTML',
         class:'bg-black text-white',
         icon: Html5,
            
@@ -15,6 +16,11 @@ const TAGS = {
         icon: TailwindCss,
             
     },
+    ASTRO: {
+        name:'Astro',
+        class: 'bg-black text-white',
+        icon: Astro,
+    },
 }
 
 const PROJECTS = [
@@ -24,7 +30,7 @@ const PROJECTS = [
         link:'https://github.com/raulmm24/portfolio/blob/master/public/projects/tatudev.jpg',
         github:'https://github.com/raulmm24/portfolio/blob/master/public/projects/tatudev.jpg',
         image:'../projects/tatudev.jpg',
-        tags: [TAGS.HTML5, TAGS.TAILWIND],
+        tags: [TAGS.HTML5, TAGS.TAILWIND, TAGS.ASTRO],
     }
 ]
 ---
