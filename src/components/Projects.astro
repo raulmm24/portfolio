@@ -2,6 +2,7 @@
 import Html5 from '../components/icons/Html5.astro';
 import TailwindCss from '../components/icons/TailwindCss.astro';
 import JavaScript from '../components/icons/JavaScript.astro';
+import AstroIcon from '../components/icons/AstroIcon.astro'
 
 const TAGS = {
     HTML5: {
@@ -20,7 +21,13 @@ const TAGS = {
         name:'JavaScript',
         class:'bg-black text-white',
         icon: JavaScript,
-        
+
+    },
+    ASTROICON: {
+        name:'Astro',
+        class:'bg-black text-white',
+        icon: AstroIcon,
+
     },
 }
 
@@ -31,7 +38,7 @@ const PROJECTS = [
         link:'https://github.com/raulmm24/portfolio/blob/master/public/projects/tatudev.jpg',
         github:'https://github.com/raulmm24/portfolio/blob/master/public/projects/tatudev.jpg',
         image:'../projects/tatudev.jpg',
-        tags: [TAGS.HTML5, TAGS.TAILWIND, TAGS.JAVASCRIPT],
+        tags: [TAGS.HTML5, TAGS.TAILWIND, TAGS.JAVASCRIPT, TAGS.ASTROICON],
     }
 ]
 ---
